@@ -6,6 +6,13 @@ class Employee {
         this.department = department;
     
     }
+    {
+        engineering.addEmployee(alice);
+engineering.addEmployee(charlie);
+marketing.addEmployee(bob);
+marketing.addEmployee(diana);
+
+    }
     getDetails() {
         return `${this.name} + ${this.position}, Salary: $${this.salary}`;
     }
@@ -58,10 +65,7 @@ const bob = new Employee("Bob", 75000, "Designer", "Marketing");
 const charlie = new Manager ("Charlie", 120000, "Engineering Manager", "Engineering", 20000);
 const diana = new Manager ("Diana", 130000, "Marketing Manager", "Marketing", 25000);
 
-engineering.addEmployee(alice);
-engineering.addEmployee(charlie);
-marketing.addEmployee(bob);
-marketing.addEmployee(diana);
+
 
 consoconsle.log(`Total salary for Engineering: $${engineering.getDepartmentSalary()}`);
 console.log(`Total salary with bonuses for Engineering: $${engineering.calculateTotalSalaryWithBonus()}`);
