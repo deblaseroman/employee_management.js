@@ -35,6 +35,16 @@ class Department {
     }
 }
 
+// Manager class inherits from Employee
+class Manager extends Employee {
+    constructor(name, salary, position, department, bonus) {
+        super(name, salary, position, department);
+        this.bonus = bonus;
+    }
 
+    getDetails() {
+        return `${super.getDetails()}, Bonus: $${this.bonus}`;
+    }
+}
 
 
