@@ -10,6 +10,31 @@ class Employee {
         return `${this.name} - ${this.position}, Salary: $${this.salary}`;
     }
 }
+// Department class
+class Department {
+    constructor(name) {
+        this.name = name;
+        this.employees = [];
+    }
+
+    addEmployee(employee) {
+        this.employees.push(employee);
+    }
+
+    getDepartmentSalary() {
+        return this.employees.reduce((total, employee) => total + employee.salary, 0);
+    }
+
+    calculateTotalSalaryWithBonus() {
+        return this.employees.reduce((total, employee) => {
+            if (employee instanceof Manager) {
+                return total + employee.salary + employee.bonus;
+            }
+            return total + employee.salary;
+        }, 0);
+    }
+}
+
 
 
 
